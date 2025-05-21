@@ -11,12 +11,12 @@ from twocaptcha import TwoCaptcha
 # you can just set the API key directly to it's value like:
 # api_key="1abc234de56fab7c89012d34e56fa7b8"
 
-api_key = os.getenv('APIKEY', 'YOUR_API_KEY')
+api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY') # Consistent environment variable name
 
 solver = TwoCaptcha(api_key)
 
 try:
-    result = solver.audio('./audio/example.mp3', lang='en')
+    result = solver.audio(file_input='./audio/example.mp3', lang='en') # Added file_input=
 
 except Exception as e:
     sys.exit(e)

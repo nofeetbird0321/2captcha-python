@@ -13,15 +13,15 @@ from twocaptcha import TwoCaptcha
 
 api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
-solver = TwoCaptcha(api_key, defaultTimeout=100, pollingInterval=10)
+solver = TwoCaptcha(api_key, default_timeout=100, polling_interval=10) # defaultTimeout -> default_timeout, pollingInterval -> polling_interval
 
 try:
     result = solver.rotate(
-        'images/rotate.jpg',
+        files_input='images/rotate.jpg', # Added files_input=
         angle=40,
         lang='en',
-        # hintImg  = 'images/rotate_hint.jpg'
-        hintText='Put the images in the correct way up')
+        # hint_img  = 'images/rotate_hint.jpg' # hintImg -> hint_img
+        hint_text='Put the images in the correct way up') # hintText -> hint_text
 
 except Exception as e:
     sys.exit(e)

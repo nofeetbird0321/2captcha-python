@@ -17,7 +17,7 @@ solver = TwoCaptcha(api_key)
 
 try:
     result = solver.friendly_captcha(
-        sitekey='FCMGEMUD2KTDSQ5H',
+        site_key='FCMGEMUD2KTDSQ5H', # sitekey -> site_key
         url='https://friendlycaptcha.com/demo',
     )
 

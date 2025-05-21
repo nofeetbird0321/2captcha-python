@@ -17,7 +17,7 @@ solver = TwoCaptcha(api_key)
 
 try:
     result = solver.turnstile(
-        sitekey='0x4AAAAAAAC3DHQFLr1GavRN',
+        site_key='0x4AAAAAAAC3DHQFLr1GavRN', # sitekey -> site_key
         url='https://2captcha.com/demo/turnstile',
     )
 

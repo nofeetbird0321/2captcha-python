@@ -12,14 +12,14 @@ from twocaptcha import TwoCaptcha
 
 api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
-solver = TwoCaptcha(api_key, defaultTimeout=180, pollingInterval=15)
+solver = TwoCaptcha(api_key, default_timeout=180, polling_interval=15) # defaultTimeout -> default_timeout, pollingInterval -> polling_interval
 
 try:
     result = solver.funcaptcha(
-        sitekey='FB18D9DB-BAFF-DDAC-A33B-6CF22267BC0A',
+        site_key='FB18D9DB-BAFF-DDAC-A33B-6CF22267BC0A', # sitekey -> site_key
         url='https://mysite.com/page/with/funcaptcha',
         surl='https://client-api.arkoselabs.com',
-        userAgent=
+        user_agent= # userAgent -> user_agent
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36',
         **{'data[key]': 'value'},  #optional data param used by some websites
         proxy={

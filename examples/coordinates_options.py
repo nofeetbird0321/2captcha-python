@@ -13,13 +13,13 @@ from twocaptcha import TwoCaptcha
 
 api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
-solver = TwoCaptcha(api_key, defaultTimeout=120, pollingInterval=5)
+solver = TwoCaptcha(api_key, default_timeout=120, polling_interval=5) # defaultTimeout -> default_timeout, pollingInterval -> polling_interval
 
 try:
-    result = solver.coordinates('./images/grid_2.jpg',
+    result = solver.coordinates(file_input='./images/grid_2.jpg', # Added file_input=
                                 lang='en',
-                                hintImg='./images/grid_hint.jpg',
-                                hintText='Select all images with an Orange')
+                                hint_img='./images/grid_hint.jpg', # hintImg -> hint_img
+                                hint_text='Select all images with an Orange') # hintText -> hint_text
 except Exception as e:
     sys.exit(e)
 

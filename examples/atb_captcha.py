@@ -18,7 +18,7 @@ solver = TwoCaptcha(api_key)
 try:
     result = solver.atb_captcha(
         app_id='af25e409b33d722a95e56a230ff8771c',
-        api_server='https://cap.aisecurius.com',
+        api_server_url='https://cap.aisecurius.com', # api_server -> api_server_url
         url='http://mysite.com/',
     )
 

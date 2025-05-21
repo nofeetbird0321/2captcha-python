@@ -16,8 +16,8 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 solver = TwoCaptcha(api_key)
 
 try:
-    result = solver.grid('./images/grid_2.jpg',
-                         hintText='Select all images with an Orange',
+    result = solver.grid(file_input='./images/grid_2.jpg', # Added file_input=
+                         hint_text='Select all images with an Orange', # hintText -> hint_text
                          rows=3,
                          cols=3)
 

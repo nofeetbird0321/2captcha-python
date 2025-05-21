@@ -13,20 +13,20 @@ from twocaptcha import TwoCaptcha
 
 api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
-solver = TwoCaptcha(api_key, defaultTimeout=30, pollingInterval=5)
+solver = TwoCaptcha(api_key, default_timeout=30, polling_interval=5) # defaultTimeout -> default_timeout, pollingInterval -> polling_interval
 
 try:
     result = solver.normal(
-        './images/normal_2.jpg',
+        file_input='./images/normal_2.jpg', # Added file_input=
         numeric=4,
-        minLen=4,
-        maxLen=20,
+        min_len=4, # minLen -> min_len
+        max_len=20, # maxLen -> max_len
         phrase=0,
-        caseSensitive=0,
+        case_sensitive=0, # caseSensitive -> case_sensitive
         calc=0,
         lang='en',
-        # hintImg='./images/normal_hint.jpg',
-        # hintText='Type red symbols only',
+        # hint_img='./images/normal_hint.jpg', # hintImg -> hint_img
+        # hint_text='Type red symbols only', # hintText -> hint_text
     )
 
 except Exception as e:

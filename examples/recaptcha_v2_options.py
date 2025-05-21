@@ -16,19 +16,19 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
 config = {
             'server':           '2captcha.com', # can be also set to 'rucaptcha.com'
-    		'apiKey':           api_key,
-    		'softId':            123,
+    		'api_key':           api_key, # apiKey -> api_key
+    		'soft_id':            123, # softId -> soft_id
     		# 'callback':         'https://your.site/result-receiver', # if set, sovler with just return captchaId, not polling API for the answer
-    		'defaultTimeout':    120,
-    		'recaptchaTimeout':  600,
-    		'pollingInterval':   10,
+    		'default_timeout':    120, # defaultTimeout -> default_timeout
+    		'recaptcha_timeout':  600, # recaptchaTimeout -> recaptcha_timeout
+    		'polling_interval':   10, # pollingInterval -> polling_interval
 	    }
 
 solver = TwoCaptcha(**config)
 
 try:
     result = solver.recaptcha(
-        sitekey='6LfDxboZAAAAAD6GHukjvUy6lszoeG3H4nQW57b6',
+        site_key='6LfDxboZAAAAAD6GHukjvUy6lszoeG3H4nQW57b6', # sitekey -> site_key
         url='https://2captcha.com/demo/recaptcha-v2-invisible?level=low',
         invisible=1,
         enterprise=0

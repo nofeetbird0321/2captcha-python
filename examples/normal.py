@@ -16,7 +16,7 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 solver = TwoCaptcha(api_key)
 
 try:
-    result = solver.normal('./images/normal.jpg')
+    result = solver.normal(file_input='./images/normal.jpg') # Added file_input=
 
 except Exception as e:
     sys.exit(e)

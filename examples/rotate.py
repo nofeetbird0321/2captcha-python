@@ -16,7 +16,7 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 solver = TwoCaptcha(api_key)
 
 try:
-    result = solver.rotate('./images/rotate.jpg')
+    result = solver.rotate(files_input='./images/rotate.jpg') # Added files_input=
 
 except Exception as e:
     sys.exit(e)

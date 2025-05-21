@@ -14,7 +14,7 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 solver = TwoCaptcha(api_key)
 
 try:
-    result = solver.canvas('./images/canvas.jpg', hintText='Draw around apple')
+    result = solver.canvas(file_input='./images/canvas.jpg', hint_text='Draw around apple') # Added file_input=, hintText -> hint_text
 
 except Exception as e:
     sys.exit(e)

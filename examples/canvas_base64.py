@@ -19,7 +19,7 @@ with open('./images/canvas.jpg', 'rb') as f:
     b64 = b64encode(f.read()).decode('utf-8')
 
 try:
-    result = solver.canvas(b64, hintText='Draw around apple')
+    result = solver.canvas(file_input=b64, hint_text='Draw around apple') # Added file_input=, hintText -> hint_text
 
 except Exception as e:
     sys.exit(e)

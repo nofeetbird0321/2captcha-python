@@ -15,7 +15,7 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 solver = TwoCaptcha(api_key)
 
 try:
-    result = solver.funcaptcha(sitekey='69A21A01-CC7B-B9C6-0F9A-E7FA06677FFC',
+    result = solver.funcaptcha(site_key='69A21A01-CC7B-B9C6-0F9A-E7FA06677FFC', # sitekey -> site_key
                                url='https://mysite.com/page/with/funcaptcha',
                                surl='https://client-api.arkoselabs.com')
 

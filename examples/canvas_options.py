@@ -12,16 +12,16 @@ from twocaptcha import TwoCaptcha
 
 api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
-solver = TwoCaptcha(api_key, defaultTimeout=120, pollingInterval=5, server='2captcha.com')
+solver = TwoCaptcha(api_key, default_timeout=120, polling_interval=5, server='2captcha.com') # defaultTimeout -> default_timeout, pollingInterval -> polling_interval
 
 try:
     result = solver.canvas(
-        './images/canvas.jpg',
-        previousId=0,
-        canSkip=0,
+        file_input='./images/canvas.jpg', # Added file_input=
+        previous_id=0, # previousId -> previous_id
+        can_skip=0, # canSkip -> can_skip
         lang='en',
-        hintImg='./images/canvas_hint.jpg',
-        hintText='Draw around apple',
+        hint_img='./images/canvas_hint.jpg', # hintImg -> hint_img
+        hint_text='Draw around apple', # hintText -> hint_text
     )
 
 except Exception as e:  

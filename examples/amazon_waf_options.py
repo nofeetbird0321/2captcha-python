@@ -16,18 +16,18 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
 config = {
             'server':           '2captcha.com', # can be also set to 'rucaptcha.com'
-    		'apiKey':           api_key,
-    		'softId':            123,
+    		'api_key':           api_key, # apiKey -> api_key
+    		'soft_id':            123, # softId -> soft_id
     		# 'callback':         'https://your.site/result-receiver', # if set, sovler with just return captchaId, not polling API for the answer
-    		'defaultTimeout':    120,
-    		'recaptchaTimeout':  600,
-    		'pollingInterval':   10,
+    		'default_timeout':    120, # defaultTimeout -> default_timeout
+    		'recaptcha_timeout':  600, # recaptchaTimeout -> recaptcha_timeout
+    		'polling_interval':   10, # pollingInterval -> polling_interval
 	    }
 
 solver = TwoCaptcha(**config)
 
 try:
-    result = solver.amazon_waf(sitekey='AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AGIqvS8v6ScFa8ZpNRrlQgKAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMx9gxoe10Zg35PWhzAgEQgDvUtMMkqkFQByMLK2329D8iX4mjvaTuUhU70LD4vLp54v3+4K1nYY2hB+OM1hMbncnMbP63y4UOrY77jg==',
+    result = solver.amazon_waf(site_key='AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AGIqvS8v6ScFa8ZpNRrlQgKAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMx9gxoe10Zg35PWhzAgEQgDvUtMMkqkFQByMLK2329D8iX4mjvaTuUhU70LD4vLp54v3+4K1nYY2hB+OM1hMbncnMbP63y4UOrY77jg==', # sitekey -> site_key
                                iv='CgAGVTNd9JAAAAnB',
                                context='Lte3LdSjiAN6nNcV0omaNt/ydFmd/eTwRCxYEeuW97LZe3IbAXWi4Er9CWQ3HbDgJ0KSpDgwyoskjKCK4VRQzYufPCdrfCYCveZCt9pMNoAluEtj0oix2GXOPVkw2d4bYOg3MtY5ZUHLR3L467NEInnRE99w5NOgokH5Ie7eOi5sYAqYtZrHABGEgrdAOVvU7bcwvrCERi9wB/WS75geb3oFy6z7Apue9GFa86Ld20jjgy4LWfaen+2fpfKHmCHTKVWfto17Bg+l5i0sr+uFRzpk1We64Fhh1Wl1NHF6M6dpS5s=',
                                url='https://efw47fpad9.execute-api.us-east-1.amazonaws.com/latest',

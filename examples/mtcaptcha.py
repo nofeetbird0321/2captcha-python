@@ -17,7 +17,7 @@ solver = TwoCaptcha(api_key)
 
 try:
     result = solver.mtcaptcha(
-        sitekey='MTPublic-KzqLY1cKH',
+        site_key='MTPublic-KzqLY1cKH', # sitekey -> site_key
         url='https://2captcha.com/demo/mtcaptcha',
     )
 

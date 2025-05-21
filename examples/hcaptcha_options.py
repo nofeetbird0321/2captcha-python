@@ -16,22 +16,22 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
 config = {
             'server':           '2captcha.com', # can be also set to 'rucaptcha.com'
-    		'apiKey':           api_key,
-    		'softId':            123,
+    		'api_key':           api_key, # apiKey -> api_key
+    		'soft_id':            123, # softId -> soft_id
     		# 'callback':         'https://your.site/result-receiver', # if set, sovler with just return captchaId, not polling API for the answer
-    		'defaultTimeout':    120,
-    		'recaptchaTimeout':  600,
-    		'pollingInterval':   10,
+    		'default_timeout':    120, # defaultTimeout -> default_timeout
+    		'recaptcha_timeout':  600, # recaptchaTimeout -> recaptcha_timeout
+    		'polling_interval':   10, # pollingInterval -> polling_interval
 	    }
 
 solver = TwoCaptcha(**config)
 
 try:
-    result = solver.hcaptcha(sitekey='f7de0da3-3303-44e8-ab48-fa32ff8ccc7b',
+    result = solver.hcaptcha(site_key='f7de0da3-3303-44e8-ab48-fa32ff8ccc7b', # sitekey -> site_key
                              url='https://2captcha.com/ru/demo/hcaptcha-invisible',
                              # invisible=1,
                              # data="rqdata",
-                             # useragent="",
+                             # user_agent="", # useragent -> user_agent (if uncommented)
                              # proxy={
                              #     'type': 'HTTPS',
                              #     'uri': 'login:password@IP_address:PORT'

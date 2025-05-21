@@ -20,8 +20,8 @@ with open('./images/grid_2.jpg', 'rb') as f:
     b64 = b64encode(f.read()).decode('utf-8')
 
 try:
-    result = solver.grid(b64,
-                         hintText='Select all images with an Orange',
+    result = solver.grid(file_input=b64, # Added file_input=
+                         hint_text='Select all images with an Orange', # hintText -> hint_text
                          rows=3,
                          cols=3)
 

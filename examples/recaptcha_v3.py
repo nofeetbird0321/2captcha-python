@@ -17,7 +17,7 @@ solver = TwoCaptcha(api_key)
 
 try:
     result = solver.recaptcha(
-        sitekey='6LfdxboZAAAAAMtnONIt4DJ8J1t4wMC-kVG02zIO',
+        site_key='6LfdxboZAAAAAMtnONIt4DJ8J1t4wMC-kVG02zIO', # sitekey -> site_key
         url='https://2captcha.com/demo/recaptcha-v3',
         action='login',
         version='v3')

@@ -13,17 +13,17 @@ from twocaptcha import TwoCaptcha
 
 api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
-solver = TwoCaptcha(api_key, defaultTimeout=100, pollingInterval=12)
+solver = TwoCaptcha(api_key, default_timeout=100, polling_interval=12) # defaultTimeout -> default_timeout, pollingInterval -> polling_interval
 
 try:
     result = solver.grid(
-        file='./images/grid_2.jpg',
+        file_input='./images/grid_2.jpg', # file -> file_input
         rows=3,
         cols=3,
-        previousId=0,
-        canSkip=0,
+        previous_id=0, # previousId -> previous_id
+        can_skip=0, # canSkip -> can_skip
         lang='en',
-        hintImg='./images/grid_hint.jpg',
+        hint_img='./images/grid_hint.jpg', # hintImg -> hint_img
         # hintText='Select all images with an Orange',
     )
 

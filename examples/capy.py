@@ -16,7 +16,7 @@ solver = TwoCaptcha(api_key)
 
 try:
     result = solver.capy(
-        sitekey='PUZZLE_Cz04hZLjuZRMYC3ee10C32D3uNms5w',
+        site_key='PUZZLE_Cz04hZLjuZRMYC3ee10C32D3uNms5w', # sitekey -> site_key
         url='https://www.mysite.com/page/captcha/',
         api_server="https://jp.api.capy.me/",
     )

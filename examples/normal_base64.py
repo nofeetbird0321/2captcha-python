@@ -20,7 +20,7 @@ with open('./images/normal.jpg', 'rb') as f:
     b64 = b64encode(f.read()).decode('utf-8')
 
 try:
-    result = solver.normal(b64)
+    result = solver.normal(file_input=b64) # Added file_input=
 
 except Exception as e:
     sys.exit(e)

@@ -19,7 +19,7 @@ solver = TwoCaptcha(api_key)
 try:
     result = solver.cutcaptcha(
         misery_key='ad52c87af17e2ec09b8d918c9f00416b1cb8c320',
-        apikey='SAs61IAI',
+        api_key_param='SAs61IAI', # apikey -> api_key_param
         url='https://mysite.com/page/with/cutcaptcha',
     )
 

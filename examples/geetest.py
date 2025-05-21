@@ -20,7 +20,7 @@ challenge = resp.content.decode('utf-8').split(';')[0]
 
 try:
     result = solver.geetest(gt='f3bf6dbdcf7886856696502e1d55e00c',
-                            apiServer='api-na.geetest.com',
+                            api_server='api-na.geetest.com', # apiServer -> api_server
                             challenge=challenge,
                             url='https://www.mysite.com/distil_r_captcha.html')
 

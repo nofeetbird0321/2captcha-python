@@ -20,7 +20,7 @@ with open('./images/grid.jpg', 'rb') as f:
     b64 = b64encode(f.read()).decode('utf-8')
 
 try:
-    result = solver.coordinates(b64)
+    result = solver.coordinates(file_input=b64) # Added file_input=
 
 except Exception as e:
     sys.exit(e)

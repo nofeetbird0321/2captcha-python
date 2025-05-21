@@ -15,7 +15,7 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 solver = TwoCaptcha(api_key)
 
 try:
-    result = solver.coordinates('./images/grid.jpg')
+    result = solver.coordinates(file_input='./images/grid.jpg') # Added file_input=
 
 except Exception as e:
     sys.exit(e)

@@ -15,19 +15,19 @@ api_key = os.getenv('APIKEY_2CAPTCHA', 'YOUR_API_KEY')
 
 config = {
             'server':           '2captcha.com', # can be also set to 'rucaptcha.com'
-    		'apiKey':           api_key,
-    		'softId':            123,
+    		'api_key':           api_key, # apiKey -> api_key
+    		'soft_id':            123, # softId -> soft_id
     		# 'callback':         'https://your.site/result-receiver', # if set, sovler with just return captchaId, not polling API for the answer
-    		'defaultTimeout':    120,
-    		'recaptchaTimeout':  600,
-    		'pollingInterval':   10,
+    		'default_timeout':    120, # defaultTimeout -> default_timeout
+    		'recaptcha_timeout':  600, # recaptchaTimeout -> recaptcha_timeout
+    		'polling_interval':   10, # pollingInterval -> polling_interval
 	    }
 
 solver = TwoCaptcha(**config)
 
 try:
     result = solver.cutcaptcha(misery_key='ad52c87af17e2ec09b8d918c9f00416b1cb8c320',
-                            apikey='SAs61IAI',
+                            api_key_param='SAs61IAI', # apikey -> api_key_param
                             url='https://mysite.com/page/with/cutcaptcha'
                             #  proxy={
                                 #  'type': 'HTTPS',
